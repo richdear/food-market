@@ -1,0 +1,20 @@
+{% extends 'food/base.html' %}
+{% block content %}
+    <table class="table table-light">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        <tr >
+            <td> {{ item.id }} </td>
+            <td> <img src="{{ item.image }}" height="150px"/></td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ item.price }}</td>
+        </tr>
+    </table>
+{% endblock %}
+
