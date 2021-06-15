@@ -1,20 +1,16 @@
 {% extends 'food/base.html' %}
 {% block content %}
-    <table class="table table-light">
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Image</th>
-            <th>Description</th>
-            <th>Price</th>
-        </tr>
-        <tr >
-            <td> {{ item.id }} </td>
-            <td> <img src="{{ item.image }}" height="150px"/></td>
-            <td>{{ item.name }}</td>
-            <td>{{ item.description }}</td>
-            <td>{{ item.price }}</td>
-        </tr>
-    </table>
+    <div class="row d-flex justify-content-center my-4">
+        <div class="col-lg-8 d-flex shadow">
+            <img src="{{ item.image }}" width="500px"/>
+            <div class="d-flex flex-column ms-4">
+                <div class="font-size-extra-large lead"> {{ item.name }}</div>
+                <div class="font-size-extra-large fw-bold">${{ item.price }}</div>
+                <div class="font-size-large">{{ item.description }}</div>
+            </div>
+        </div>
+    </div>
+
+
 {% endblock %}
 
